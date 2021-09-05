@@ -1,0 +1,127 @@
+{
+    "name": "[Global] Z Fold 3 & Flip3 Order",
+    "description": "Order",
+    "definition": {
+      "container": {
+        "func": "container",
+        "pred": {
+          "func": "or",
+          "preds": [
+            {
+              "func": "container",
+              "pred": {
+                "func": "container",
+                "pred": {
+                  "func": "and",
+                  "preds": [
+                    {
+                      "evt": {
+                        "func": "event",
+                        "name": "metrics/orders"
+                      },
+                      "func": "event-exists",
+                      "description": "Order (purchase event)"
+                    },
+                    {
+                      "func": "container",
+                      "pred": {
+                        "func": "or",
+                        "preds": [
+                          {
+                            "str": "SM-F92",
+                            "val": {
+                              "func": "attr",
+                              "name": "variables/product"
+                            },
+                            "func": "starts-with",
+                            "description": "Product"
+                          },
+                          {
+                            "str": "SM-F92",
+                            "val": {
+                              "func": "attr",
+                              "name": "variables/evar41"
+                            },
+                            "func": "contains",
+                            "description": "Model Code (v41)"
+                          }
+                        ]
+                      },
+                      "context": "hits"
+                    }
+                  ]
+                },
+                "context": "hits",
+                "description": "Container Title"
+              },
+              "context": "hits",
+              "description": "[Global] Z Fold3 Order"
+            },
+            {
+              "func": "container",
+              "pred": {
+                "func": "container",
+                "pred": {
+                  "func": "and",
+                  "preds": [
+                    {
+                      "evt": {
+                        "func": "event",
+                        "name": "metrics/orders"
+                      },
+                      "func": "event-exists",
+                      "description": "Order (purchase event)"
+                    },
+                    {
+                      "func": "container",
+                      "pred": {
+                        "func": "or",
+                        "preds": [
+                          {
+                            "str": "SM-F71",
+                            "val": {
+                              "func": "attr",
+                              "name": "variables/product"
+                            },
+                            "func": "starts-with",
+                            "description": "Product"
+                          },
+                          {
+                            "str": "SM-F71",
+                            "val": {
+                              "func": "attr",
+                              "name": "variables/evar41"
+                            },
+                            "func": "contains",
+                            "description": "Model Code (v41)"
+                          }
+                        ]
+                      },
+                      "context": "hits"
+                    }
+                  ]
+                },
+                "context": "hits",
+                "description": "Container Title"
+              },
+              "context": "hits",
+              "description": "[Global] Z Flip3 Order"
+            }
+          ]
+        },
+        "context": "hits"
+      },
+      "func": "segment",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    "id": "s200001591_60f51bae7870ea29de95779a",
+    "isPostShardId": true,
+    "rsid": "sssamsung4mstglobal",
+    "owner": {
+      "id": 200043605
+    }
+  }

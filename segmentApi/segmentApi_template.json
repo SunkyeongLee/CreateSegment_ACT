@@ -1,0 +1,83 @@
+{
+    "name": "[Test] Home > PFS",
+    "description": "API Test",
+    "rsid": "sssamsung4mstglobal",
+    "reportSuiteName": "P6 WEB - MST Global",
+    "owner": {
+      "id": 200043605,
+      "name": "string",
+      "login": "string"
+    },
+    "definition": {
+        "func":"segment",
+        "version":[ 1, 0, 0 ],
+        "container": {
+            "func": "container",
+            "context": "visits",
+            "pred": {
+                "func": "sequence",
+                "stream": [
+                    {
+                        "func":"container",
+                        "context":"hits",
+                        "pred": {
+                            "func": "streq",
+                            "str": "home",
+                            "val": {
+                                "func":"attr", "name":"variables/prop6"
+                            }
+                        }
+                    },
+                    {
+                        "func":"container",
+                        "context":"hits",
+                        "pred": {
+                            "func": "streq",
+                            "str": "product family showcase",
+                            "val": {
+                                "func":"attr", "name":"variables/prop6"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "compatibility": {
+      "valid": true,
+      "message": "string",
+      "validator_version": "string",
+      "supported_products": [
+        "string"
+      ],
+      "supported_schema": [
+        "string"
+      ],
+      "supported_features": [
+        "string"
+      ]
+    },
+    "definitionLastModified": "2021-08-22T06:19:00.458Z",
+    "categories": [
+      "string"
+    ],
+    "siteTitle": "string",
+    "tags": [
+      {
+        "id": 0,
+        "name": "string",
+        "description": "string",
+        "components": [
+          {
+            "componentType": "string",
+            "componentId": "string",
+            "tags": [
+              "Unknown Type: Tag"
+            ]
+          }
+        ]
+      }
+    ],
+    "modified": "2021-08-22T06:19:00.458Z",
+    "created": "2021-08-22T06:19:00.458Z"
+  }

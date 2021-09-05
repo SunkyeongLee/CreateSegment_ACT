@@ -1,0 +1,833 @@
+{
+  "name": "Section : Home - Visit",
+  "description": "Home",
+  "definition": {
+    "container": {
+      "func": "container",
+      "context": "hits",
+      "pred": {
+        "context": "hits",
+        "description": "Home Section",
+        "func": "container",
+        "pred": {
+          "func": "or",
+          "preds": [
+            {
+              "str": "bd:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "az:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "mk:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "in:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "it:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "de:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "fr:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "es:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "se:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "fi:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "no:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "cn:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "hu:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "dk:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "sec:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "pt:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ru:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ch:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "lt:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "br:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "uk:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ch_fr:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "lv:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "tr:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "jp:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "tw:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "iran:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "my:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "hk:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "th:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ua:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ca:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "nl:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "au:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "pl:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "mx:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ae:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "levant:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "id:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "sa:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "vn:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "at:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "sg:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "africa_en:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ph:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ar:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "eg:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "latin:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ee:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "pk:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "co:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "n_africa:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "cz:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "gr:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "cl:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ro:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "africa_fr:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "be:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "za:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ae_ar:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "nz:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "il:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "si:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ua_ru:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "be_fr:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "hk_en:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "africa_pt:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "pe:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "latin_en:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ve:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "sk:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ie:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "rs:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "uy:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ca_fr:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "kz_ru:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "bg:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "hr:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "sa_en:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "py:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "al:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "mm:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "lb:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "kz_kz:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "levant_ar:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "uz_uz:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "uz_ru:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ps:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            },
+            {
+              "str": "ba:home",
+              "val": {
+                "func": "attr",
+                "name": "variables/page"
+              },
+              "description": "Page",
+              "func": "streq"
+            }
+          ]
+        }
+      }
+    },
+    "func": "segment",
+    "version": [
+      1,
+      0,
+      0
+    ]
+  },
+  "id": "s200001591_56b04bf3e4b041b05a529c49",
+  "isPostShardId": true,
+  "rsid": "sssamsung4mstglobal",
+  "owner": {
+    "id": 200043605
+  }
+}

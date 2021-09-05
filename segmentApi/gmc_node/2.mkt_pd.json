@@ -1,0 +1,890 @@
+{
+  "name": "[Global] Z Fold 3 & Flip3 MKT PD Visit",
+  "description": "MKT PD",
+  "definition": {
+    "container": {
+      "func": "container",
+      "context": "hits",
+      "pred": {
+        "func": "or",
+        "preds": [
+          {
+            "context": "hits",
+            "description": "[Global] Z Fold3 MKT PD Visit",
+            "func": "container",
+            "pred": {
+              "func": "and",
+              "preds": [
+                {
+                  "context": "hits",
+                  "description": "[Global] Z Fold3 Total Visit",
+                  "func": "container",
+                  "pred": {
+                    "func": "or",
+                    "preds": [
+                      {
+                        "context": "hits",
+                        "description": "Common",
+                        "func": "container",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "context": "hits",
+                              "description": "Keyword",
+                              "func": "container",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "fold3",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  },
+                                  {
+                                    "str": "fold 3",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  },
+                                  {
+                                    "str": "SM-F92",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "context": "hits",
+                              "description": "EXCLUDE",
+                              "func": "container",
+                              "pred": {
+                                "func": "without",
+                                "pred": {
+                                  "func": "or",
+                                  "preds": [
+                                    {
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains-any-of",
+                                      "list": [
+                                        "support",
+                                        "business",
+                                        "cover",
+                                        "microsite",
+                                        "charger",
+                                        "mobile-accesso",
+                                        "mobile_accesso",
+                                        ":offer:",
+                                        "20-offer",
+                                        "e-offer",
+                                        ":promotion",
+                                        "kampanyalar",
+                                        "smart-ways-to-buy",
+                                        "onsiparis",
+                                        ":c:",
+                                        "news",
+                                        "community",
+                                        "gbm",
+                                        "member",
+                                        "protector",
+                                        "wearable",
+                                        "trai-nghiem",
+                                        "mobile:accesso",
+                                        ":finder",
+                                        "warranty",
+                                        "tablet"
+                                      ]
+                                    },
+                                    {
+                                      "str": "tw:campaign",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "starts-with"
+                                    },
+                                    {
+                                      "str": "se:explore",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "starts-with"
+                                    },
+                                    {
+                                      "str": "no:explore",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "starts-with"
+                                    },
+                                    {
+                                      "str": "dk:explore",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "starts-with"
+                                    },
+                                    {
+                                      "str": "fi:explore",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "starts-with"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "Local Specific",
+                        "func": "container",
+                        "pred": {
+                          "context": "hits",
+                          "description": "UK",
+                          "func": "container",
+                          "pred": {
+                            "str": "uk:campaign:mobile:smartphones:galaxy z fold3 5g",
+                            "val": {
+                              "func": "attr",
+                              "name": "variables/page"
+                            },
+                            "description": "Page",
+                            "func": "streq"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "context": "hits",
+                  "description": "[Global] Z Fold3 Buy Page Visit",
+                  "func": "container",
+                  "pred": {
+                    "func": "without",
+                    "pred": {
+                      "func": "or",
+                      "preds": [
+                        {
+                          "context": "hits",
+                          "description": "Common",
+                          "func": "container",
+                          "pred": {
+                            "func": "and",
+                            "preds": [
+                              {
+                                "context": "hits",
+                                "description": "Keyword",
+                                "func": "container",
+                                "pred": {
+                                  "func": "or",
+                                  "preds": [
+                                    {
+                                      "str": "fold3",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "fold 3",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "SM-F92",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "context": "hits",
+                                "description": "Buy Keyword",
+                                "func": "container",
+                                "pred": {
+                                  "func": "or",
+                                  "preds": [
+                                    {
+                                      "str": ":shop:",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": ":buy",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "preorder",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "/buy",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/prop39"
+                                      },
+                                      "description": "URL (p39)",
+                                      "func": "contains"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "context": "hits",
+                                "description": "EXCLUDE",
+                                "func": "container",
+                                "pred": {
+                                  "func": "without",
+                                  "pred": {
+                                    "func": "or",
+                                    "preds": [
+                                      {
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "contains-any-of",
+                                        "list": [
+                                          "support",
+                                          "business",
+                                          "cover",
+                                          "microsite",
+                                          "charger",
+                                          "mobile-accesso",
+                                          "mobile_accesso",
+                                          ":offer:",
+                                          "20-offer",
+                                          "e-offer",
+                                          ":promotion",
+                                          "kampanyalar",
+                                          "smart-ways-to-buy",
+                                          "onsiparis",
+                                          ":c:",
+                                          "news",
+                                          "community",
+                                          "gbm",
+                                          "member",
+                                          "protector",
+                                          "wearable",
+                                          "trai-nghiem",
+                                          "mobile:accesso",
+                                          ":finder",
+                                          "warranty",
+                                          "tablet"
+                                        ]
+                                      },
+                                      {
+                                        "str": "tw:campaign",
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "starts-with"
+                                      },
+                                      {
+                                        "str": "se:explore",
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "starts-with"
+                                      },
+                                      {
+                                        "str": "no:explore",
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "starts-with"
+                                      },
+                                      {
+                                        "str": "dk:explore",
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "starts-with"
+                                      },
+                                      {
+                                        "str": "fi:explore",
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "starts-with"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "context": "hits",
+                          "description": "Local Specific",
+                          "func": "container",
+                          "pred": {
+                            "func": "or",
+                            "preds": [
+                              {
+                                "context": "hits",
+                                "description": "UK",
+                                "func": "container",
+                                "pred": {
+                                  "str": "uk:campaign:mobile:smartphones:galaxy z fold3 5g",
+                                  "val": {
+                                    "func": "attr",
+                                    "name": "variables/page"
+                                  },
+                                  "description": "Page",
+                                  "func": "streq"
+                                }
+                              },
+                              {
+                                "context": "hits",
+                                "description": "SEC Buy(After Launching)",
+                                "func": "container",
+                                "pred": {
+                                  "str": "sec:galaxy-z-fold3:launching",
+                                  "val": {
+                                    "func": "attr",
+                                    "name": "variables/page"
+                                  },
+                                  "description": "Page",
+                                  "func": "streq"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "context": "hits",
+            "description": "[Global] Z Flip3 MKT PD Visit",
+            "func": "container",
+            "pred": {
+              "func": "and",
+              "preds": [
+                {
+                  "context": "hits",
+                  "description": "[Global] Z Flip3 Total Visit",
+                  "func": "container",
+                  "pred": {
+                    "func": "or",
+                    "preds": [
+                      {
+                        "context": "hits",
+                        "description": "Common",
+                        "func": "container",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "context": "hits",
+                              "description": "Keyword",
+                              "func": "container",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "zflip3",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  },
+                                  {
+                                    "str": "z flip3",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  },
+                                  {
+                                    "str": "z-flip3",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  },
+                                  {
+                                    "str": "sm-f71",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "context": "hits",
+                              "description": "EXCLUDE",
+                              "func": "container",
+                              "pred": {
+                                "func": "without",
+                                "pred": {
+                                  "func": "or",
+                                  "preds": [
+                                    {
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains-any-of",
+                                      "list": [
+                                        "support",
+                                        "business",
+                                        "cover",
+                                        "microsite",
+                                        "charger",
+                                        "mobile-accesso",
+                                        "mobile_accesso",
+                                        ":offer:",
+                                        "20-offer",
+                                        "e-offer",
+                                        ":promotion",
+                                        "kampanyalar",
+                                        "smart-ways-to-buy",
+                                        "onsiparis",
+                                        ":c:",
+                                        "news",
+                                        "community",
+                                        "gbm",
+                                        "member",
+                                        "protector",
+                                        "wearable",
+                                        "trai-nghiem",
+                                        "mobile:accesso",
+                                        ":finder",
+                                        "warranty",
+                                        "tablet"
+                                      ]
+                                    },
+                                    {
+                                      "str": "tw:campaign",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "starts-with"
+                                    },
+                                    {
+                                      "str": "se:explore",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "starts-with"
+                                    },
+                                    {
+                                      "str": "no:explore",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "starts-with"
+                                    },
+                                    {
+                                      "str": "dk:explore",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "starts-with"
+                                    },
+                                    {
+                                      "str": "fi:explore",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "starts-with"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "Local Specific",
+                        "func": "container",
+                        "pred": {
+                          "str": "uk:campaign:mobile:smartphones:galaxy z flip3 5g",
+                          "val": {
+                            "func": "attr",
+                            "name": "variables/page"
+                          },
+                          "description": "Page",
+                          "func": "streq"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "context": "hits",
+                  "description": "[Global] Z Flip3 Buy Page Visit",
+                  "func": "container",
+                  "pred": {
+                    "func": "without",
+                    "pred": {
+                      "func": "or",
+                      "preds": [
+                        {
+                          "context": "hits",
+                          "description": "Common",
+                          "func": "container",
+                          "pred": {
+                            "func": "and",
+                            "preds": [
+                              {
+                                "context": "hits",
+                                "description": "Keyword",
+                                "func": "container",
+                                "pred": {
+                                  "func": "or",
+                                  "preds": [
+                                    {
+                                      "str": "zflip3",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "z flip3",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "z-flip3",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "sm-f71",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "context": "hits",
+                                "description": "Buy Keyword",
+                                "func": "container",
+                                "pred": {
+                                  "func": "or",
+                                  "preds": [
+                                    {
+                                      "str": ":shop:",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": ":buy",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "preorder",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "/buy",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/prop39"
+                                      },
+                                      "description": "URL (p39)",
+                                      "func": "contains"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "context": "hits",
+                                "description": "EXCLUDE",
+                                "func": "container",
+                                "pred": {
+                                  "func": "without",
+                                  "pred": {
+                                    "func": "or",
+                                    "preds": [
+                                      {
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "contains-any-of",
+                                        "list": [
+                                          "support",
+                                          "business",
+                                          "cover",
+                                          "microsite",
+                                          "charger",
+                                          "mobile-accesso",
+                                          "mobile_accesso",
+                                          ":offer:",
+                                          "20-offer",
+                                          "e-offer",
+                                          ":promotion",
+                                          "kampanyalar",
+                                          "smart-ways-to-buy",
+                                          "onsiparis",
+                                          ":c:",
+                                          "news",
+                                          "community",
+                                          "gbm",
+                                          "member",
+                                          "protector",
+                                          "wearable",
+                                          "trai-nghiem",
+                                          "mobile:accesso",
+                                          ":finder",
+                                          "warranty",
+                                          "tablet"
+                                        ]
+                                      },
+                                      {
+                                        "str": "tw:campaign",
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "starts-with"
+                                      },
+                                      {
+                                        "str": "se:explore",
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "starts-with"
+                                      },
+                                      {
+                                        "str": "no:explore",
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "starts-with"
+                                      },
+                                      {
+                                        "str": "dk:explore",
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "starts-with"
+                                      },
+                                      {
+                                        "str": "fi:explore",
+                                        "val": {
+                                          "func": "attr",
+                                          "name": "variables/page"
+                                        },
+                                        "description": "Page",
+                                        "func": "starts-with"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "context": "hits",
+                          "description": "Local Specific",
+                          "func": "container",
+                          "pred": {
+                            "func": "or",
+                            "preds": [
+                              {
+                                "context": "hits",
+                                "description": "RU",
+                                "func": "container",
+                                "pred": {
+                                  "str": "ru:mobile:smartphones:galaxy z:buy",
+                                  "val": {
+                                    "func": "attr",
+                                    "name": "variables/page"
+                                  },
+                                  "description": "Page",
+                                  "func": "streq"
+                                }
+                              },
+                              {
+                                "context": "hits",
+                                "description": "UK",
+                                "func": "container",
+                                "pred": {
+                                  "str": "uk:campaign:mobile:smartphones:galaxy z flip3 5g",
+                                  "val": {
+                                    "func": "attr",
+                                    "name": "variables/page"
+                                  },
+                                  "description": "Page",
+                                  "func": "streq"
+                                }
+                              },
+                              {
+                                "context": "hits",
+                                "description": "KR",
+                                "func": "container",
+                                "pred": {
+                                  "str": "sec:galaxy-z-flip3:launching",
+                                  "val": {
+                                    "func": "attr",
+                                    "name": "variables/page"
+                                  },
+                                  "description": "Page",
+                                  "func": "streq"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "func": "segment",
+    "version": [
+      1,
+      0,
+      0
+    ]
+  },
+  "id": "s200001591_60f517cc0d97225d47c1ad2e",
+  "isPostShardId": true,
+  "rsid": "sssamsung4mstglobal",
+  "owner": {
+    "id": 200043605
+  }
+}

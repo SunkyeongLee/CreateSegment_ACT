@@ -1,0 +1,2138 @@
+{
+  "name": "[API Test] Z Fold 3 & Flip3 Checkout Page Visit",
+  "description": "Checkout",
+  "definition": {
+    "container": {
+      "func": "container",
+      "context": "hits",
+      "pred": {
+        "func": "or",
+        "preds": [
+          {
+            "context": "visits",
+            "description": "[Global] Z Fold3 Checkout Page Visit",
+            "func": "container",
+            "pred": {
+              "func": "sequence",
+              "stream": [
+                {
+                  "context": "hits",
+                  "description": "[Global] Z Fold3 Add to Cart Visit",
+                  "func": "container",
+                  "pred": {
+                    "func": "or",
+                    "preds": [
+                      {
+                        "context": "hits",
+                        "description": "ADD TO CART BUTTON (ORIGINAL)",
+                        "func": "container",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "context": "hits",
+                              "description": "Product & Model Code",
+                              "func": "container",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "SM-F92",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/product"
+                                    },
+                                    "description": "Product",
+                                    "func": "starts-with"
+                                  },
+                                  {
+                                    "str": "SM-F92",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/evar41"
+                                    },
+                                    "description": "Model Code (v41)",
+                                    "func": "contains"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "func": "event-exists",
+                              "description": "Cart Add (event)",
+                              "evt": {
+                                "func": "event",
+                                "name": "metrics/cartadditions"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "func": "container",
+                        "context": "hits",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "str": ":mobile:smartphones:galaxy z:galaxy-z-fold3:buy",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/evar40"
+                              },
+                              "description": "PageName (v40)",
+                              "func": "ends-with"
+                            },
+                            {
+                              "func": "container",
+                              "context": "hits",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "secondary navi:continue",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/prop11"
+                                    },
+                                    "description": "Secondary Navi & Breadcrumb (p11)",
+                                    "func": "streq"
+                                  },
+                                  {
+                                    "str": "pd buying tool:continue",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/evar26"
+                                    },
+                                    "description": "Content Click (v26)",
+                                    "func": "streq"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "visits",
+                        "description": "CN",
+                        "func": "container",
+                        "pred": {
+                          "func": "sequence",
+                          "stream": [
+                            {
+                              "func": "container",
+                              "context": "hits",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "cn:shop:ttmproduct:sm-f92",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "starts-with"
+                                  },
+                                  {
+                                    "str": "cn:shop:ttmproduct:sm-f71",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "starts-with"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "count": 1,
+                              "limit": "within",
+                              "attribute": {
+                                "func": "attr",
+                                "name": "variables/page",
+                                "description": "Page"
+                              },
+                              "func": "dimension-restriction"
+                            },
+                            {
+                              "context": "hits",
+                              "description": "AUTO_GENERATED",
+                              "func": "container",
+                              "pred": {
+                                "str": "cn:shop:user:login",
+                                "val": {
+                                  "func": "attr",
+                                  "name": "variables/page"
+                                },
+                                "description": "Page",
+                                "func": "streq"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "UK",
+                        "func": "container",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "str": "uk:campaign:mobile:smartphones:galaxy z fold3 5g",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/evar40"
+                              },
+                              "description": "PageName (v40)",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "uk:FoldEcom:checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/evar33"
+                              },
+                              "description": "Microsite (v33)",
+                              "func": "streq"
+                            },
+                            {
+                              "func": "event-exists",
+                              "description": "Microsite (e45)",
+                              "evt": {
+                                "func": "event",
+                                "name": "metrics/event45"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "KR",
+                        "func": "container",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "func": "container",
+                              "context": "hits",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "sec:microsite:galaxy-z-fold3:preorder:buy",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/evar33"
+                                    },
+                                    "description": "Microsite (v33)",
+                                    "func": "starts-with"
+                                  },
+                                  {
+                                    "str": "sec:microsite:galaxy-z-fold3:launching:buy",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/evar33"
+                                    },
+                                    "description": "Microsite (v33)",
+                                    "func": "starts-with"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "str": "_SM-F92",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/evar33"
+                              },
+                              "description": "Microsite (v33)",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "indicator",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/evar33"
+                              },
+                              "description": "Microsite (v33)",
+                              "func": "not-contains"
+                            },
+                            {
+                              "func": "event-exists",
+                              "description": "Microsite (e45)",
+                              "evt": {
+                                "func": "event",
+                                "name": "metrics/event45"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "context": "hits",
+                  "description": "[Global] Checkout Page Visit",
+                  "func": "container",
+                  "pred": {
+                    "func": "or",
+                    "preds": [
+                      {
+                        "context": "hits",
+                        "description": "COMMON",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "shop checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop6"
+                              },
+                              "description": "All Page Track (p6)",
+                              "func": "streq"
+                            },
+                            {
+                              "context": "hits",
+                              "description": "HYBRIS",
+                              "func": "container",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "shop:checkout:multi",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  },
+                                  {
+                                    "context": "hits",
+                                    "description": "Container Title",
+                                    "func": "container",
+                                    "pred": {
+                                      "func": "and",
+                                      "preds": [
+                                        {
+                                          "str": "shop.samsung.com/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/page"
+                                          },
+                                          "description": "Page",
+                                          "func": "contains"
+                                        },
+                                        {
+                                          "str": "checkout/multi/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/page"
+                                          },
+                                          "description": "Page",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "context": "hits",
+                                    "description": "Container Title",
+                                    "func": "container",
+                                    "pred": {
+                                      "func": "and",
+                                      "preds": [
+                                        {
+                                          "str": "shop.samsung.com/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        },
+                                        {
+                                          "str": "checkout/multi/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "context": "hits",
+                              "description": "GPv2",
+                              "func": "container",
+                              "pred": {
+                                "str": "shop:web:checkout",
+                                "val": {
+                                  "func": "attr",
+                                  "name": "variables/page"
+                                },
+                                "description": "Page",
+                                "func": "contains"
+                              }
+                            },
+                            {
+                              "context": "hits",
+                              "description": "3rd Party",
+                              "func": "container",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "shop:cartandcheckout:checkout",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  },
+                                  {
+                                    "context": "hits",
+                                    "description": "Container Title",
+                                    "func": "container",
+                                    "pred": {
+                                      "func": "and",
+                                      "preds": [
+                                        {
+                                          "str": "shop.samsung.com/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        },
+                                        {
+                                          "str": "/ng/cartAndCheckout/checkout",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "BR",
+                        "func": "container",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "str": "shop:checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "contains"
+                            },
+                            {
+                              "context": "hits",
+                              "description": "Exclude Keyword",
+                              "func": "container",
+                              "pred": {
+                                "func": "without",
+                                "pred": {
+                                  "func": "or",
+                                  "preds": [
+                                    {
+                                      "str": "login",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "cart",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "signup",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "CN",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "cn:shop:apporder:ttmorderinfo",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "cn:shop:order:ttmorderinfo",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "cn:shop:apporder:orderinfo",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "cn:shop:order:orderinfo",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "cn:shop:order:confirm",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "www.samsungshop.com.cn/order/confirm.htm",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "DE",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "de:shop:checkout:kundendaten",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "de:shop:checkout:vertragsdaten",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "de:shop:checkout:bestelluebersicht",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "de:shop:tarife:checkout:kundendaten",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "de:shop:tarife:checkout:vertragsdaten",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "de:shop:tarife:checkout:bestelluebersicht",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "IN",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "in:shop:checkout:orderinformation",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "shop.samsung.com/in/checkout/onepage/",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:bajaj-card-entry",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:billing-address",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:card-entry",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:payment:",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:payoptions",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:place-order",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:shipping-",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "KR",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "store.samsung.com/sec/ng/cartAndCheckout/checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "store.samsung.com/sec/checkout/multi/",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "sec:shop:order",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "contains"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "LATIN",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "func": "container",
+                              "context": "hits",
+                              "pred": {
+                                "func": "and",
+                                "preds": [
+                                  {
+                                    "func": "container",
+                                    "context": "hits",
+                                    "pred": {
+                                      "func": "or",
+                                      "preds": [
+                                        {
+                                          "str": "latin:shop:checkout",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/page"
+                                          },
+                                          "description": "Page",
+                                          "func": "starts-with"
+                                        },
+                                        {
+                                          "str": "shop.samsung.com/latin/checkout",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "func": "container",
+                                    "context": "hits",
+                                    "pred": {
+                                      "func": "without",
+                                      "pred": {
+                                        "func": "or",
+                                        "preds": [
+                                          {
+                                            "str": "cart",
+                                            "val": {
+                                              "func": "attr",
+                                              "name": "variables/page"
+                                            },
+                                            "description": "Page",
+                                            "func": "contains"
+                                          },
+                                          {
+                                            "str": "cart",
+                                            "val": {
+                                              "func": "attr",
+                                              "name": "variables/prop39"
+                                            },
+                                            "description": "URL (p39)",
+                                            "func": "contains"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "context": "hits",
+                              "description": "Container Title",
+                              "func": "container",
+                              "pred": {
+                                "func": "and",
+                                "preds": [
+                                  {
+                                    "func": "container",
+                                    "context": "hits",
+                                    "pred": {
+                                      "func": "or",
+                                      "preds": [
+                                        {
+                                          "str": "latin:shop",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/page"
+                                          },
+                                          "description": "Page",
+                                          "func": "starts-with"
+                                        },
+                                        {
+                                          "str": "shop.samsung.com/latin",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "context": "hits",
+                                    "description": "Container Title",
+                                    "func": "container",
+                                    "pred": {
+                                      "func": "or",
+                                      "preds": [
+                                        {
+                                          "str": ":checkout:",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/page"
+                                          },
+                                          "description": "Page",
+                                          "func": "contains"
+                                        },
+                                        {
+                                          "str": "/checkout/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "func": "container",
+                                    "context": "hits",
+                                    "pred": {
+                                      "func": "without",
+                                      "pred": {
+                                        "func": "or",
+                                        "preds": [
+                                          {
+                                            "str": "cart",
+                                            "val": {
+                                              "func": "attr",
+                                              "name": "variables/page"
+                                            },
+                                            "description": "Page",
+                                            "func": "contains"
+                                          },
+                                          {
+                                            "str": "cart",
+                                            "val": {
+                                              "func": "attr",
+                                              "name": "variables/prop39"
+                                            },
+                                            "description": "URL (p39)",
+                                            "func": "contains"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "PL",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "pl:shop:koszyk:adres",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "pl:shop:koszyk:platnosc",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "RU",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "ru:shop:order",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "online-samsung.ru/order",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "UK",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "uk:checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "uk:shop:checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "shop.samsung.com/uk/checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "SENA",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "dk:shop:basket",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "fi:shop:basket",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "no:shop:basket",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "se:shop:basket",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "context": "visits",
+            "description": "[Global] Z Flip3 Checkout Page Visit",
+            "func": "container",
+            "pred": {
+              "func": "sequence",
+              "stream": [
+                {
+                  "context": "hits",
+                  "description": "[Global] Z Flip3 Add to Cart Visit",
+                  "func": "container",
+                  "pred": {
+                    "func": "or",
+                    "preds": [
+                      {
+                        "func": "container",
+                        "context": "hits",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "func": "event-exists",
+                              "description": "Cart Add (event)",
+                              "evt": {
+                                "func": "event",
+                                "name": "metrics/cartadditions"
+                              }
+                            },
+                            {
+                              "context": "hits",
+                              "description": "Product & Model Code",
+                              "func": "container",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "SM-F71",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/product"
+                                    },
+                                    "description": "Product",
+                                    "func": "starts-with"
+                                  },
+                                  {
+                                    "str": "SM-F71",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/evar41"
+                                    },
+                                    "description": "Model Code (v41)",
+                                    "func": "contains"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "func": "container",
+                        "context": "hits",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "str": ":mobile:smartphones:galaxy z:galaxy-z-flip3:buy",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/evar40"
+                              },
+                              "description": "PageName (v40)",
+                              "func": "ends-with"
+                            },
+                            {
+                              "func": "container",
+                              "context": "hits",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "secondary navi:continue",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/prop11"
+                                    },
+                                    "description": "Secondary Navi & Breadcrumb (p11)",
+                                    "func": "streq"
+                                  },
+                                  {
+                                    "str": "pd buying tool:continue",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/evar26"
+                                    },
+                                    "description": "Content Click (v26)",
+                                    "func": "streq"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "visits",
+                        "description": "CN",
+                        "func": "container",
+                        "pred": {
+                          "func": "sequence",
+                          "stream": [
+                            {
+                              "func": "container",
+                              "context": "hits",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "cn:shop:ttmproduct:sm-f92",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "starts-with"
+                                  },
+                                  {
+                                    "str": "cn:shop:ttmproduct:sm-f71",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "starts-with"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "count": 1,
+                              "limit": "within",
+                              "attribute": {
+                                "func": "attr",
+                                "name": "variables/page",
+                                "description": "Page"
+                              },
+                              "func": "dimension-restriction"
+                            },
+                            {
+                              "context": "hits",
+                              "description": "AUTO_GENERATED",
+                              "func": "container",
+                              "pred": {
+                                "str": "cn:shop:user:login",
+                                "val": {
+                                  "func": "attr",
+                                  "name": "variables/page"
+                                },
+                                "description": "Page",
+                                "func": "streq"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "UK",
+                        "func": "container",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "str": "uk:campaign:mobile:smartphones:galaxy z flip3 5g",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/evar40"
+                              },
+                              "description": "PageName (v40)",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "uk:FlipEcom:checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/evar33"
+                              },
+                              "description": "Microsite (v33)",
+                              "func": "streq"
+                            },
+                            {
+                              "func": "event-exists",
+                              "description": "Microsite (e45)",
+                              "evt": {
+                                "func": "event",
+                                "name": "metrics/event45"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "func": "container",
+                        "context": "hits",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "func": "container",
+                              "context": "hits",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "sec:microsite:galaxy-z-flip3:preorder:buy",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/evar33"
+                                    },
+                                    "description": "Microsite (v33)",
+                                    "func": "starts-with"
+                                  },
+                                  {
+                                    "str": "sec:microsite:galaxy-z-flip3:launching:buy",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/evar33"
+                                    },
+                                    "description": "Microsite (v33)",
+                                    "func": "starts-with"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "str": "_sm-f71",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/evar33"
+                              },
+                              "description": "Microsite (v33)",
+                              "func": "contains"
+                            },
+                            {
+                              "func": "event-exists",
+                              "description": "Microsite (e45)",
+                              "evt": {
+                                "func": "event",
+                                "name": "metrics/event45"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "context": "hits",
+                  "description": "[Global] Checkout Page Visit",
+                  "func": "container",
+                  "pred": {
+                    "func": "or",
+                    "preds": [
+                      {
+                        "context": "hits",
+                        "description": "COMMON",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "shop checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop6"
+                              },
+                              "description": "All Page Track (p6)",
+                              "func": "streq"
+                            },
+                            {
+                              "context": "hits",
+                              "description": "HYBRIS",
+                              "func": "container",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "shop:checkout:multi",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  },
+                                  {
+                                    "context": "hits",
+                                    "description": "Container Title",
+                                    "func": "container",
+                                    "pred": {
+                                      "func": "and",
+                                      "preds": [
+                                        {
+                                          "str": "shop.samsung.com/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/page"
+                                          },
+                                          "description": "Page",
+                                          "func": "contains"
+                                        },
+                                        {
+                                          "str": "checkout/multi/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/page"
+                                          },
+                                          "description": "Page",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "context": "hits",
+                                    "description": "Container Title",
+                                    "func": "container",
+                                    "pred": {
+                                      "func": "and",
+                                      "preds": [
+                                        {
+                                          "str": "shop.samsung.com/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        },
+                                        {
+                                          "str": "checkout/multi/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "context": "hits",
+                              "description": "GPv2",
+                              "func": "container",
+                              "pred": {
+                                "str": "shop:web:checkout",
+                                "val": {
+                                  "func": "attr",
+                                  "name": "variables/page"
+                                },
+                                "description": "Page",
+                                "func": "contains"
+                              }
+                            },
+                            {
+                              "context": "hits",
+                              "description": "3rd Party",
+                              "func": "container",
+                              "pred": {
+                                "func": "or",
+                                "preds": [
+                                  {
+                                    "str": "shop:cartandcheckout:checkout",
+                                    "val": {
+                                      "func": "attr",
+                                      "name": "variables/page"
+                                    },
+                                    "description": "Page",
+                                    "func": "contains"
+                                  },
+                                  {
+                                    "context": "hits",
+                                    "description": "Container Title",
+                                    "func": "container",
+                                    "pred": {
+                                      "func": "and",
+                                      "preds": [
+                                        {
+                                          "str": "shop.samsung.com/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        },
+                                        {
+                                          "str": "/ng/cartAndCheckout/checkout",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "BR",
+                        "func": "container",
+                        "pred": {
+                          "func": "and",
+                          "preds": [
+                            {
+                              "str": "shop:checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "contains"
+                            },
+                            {
+                              "context": "hits",
+                              "description": "Exclude Keyword",
+                              "func": "container",
+                              "pred": {
+                                "func": "without",
+                                "pred": {
+                                  "func": "or",
+                                  "preds": [
+                                    {
+                                      "str": "login",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "cart",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    },
+                                    {
+                                      "str": "signup",
+                                      "val": {
+                                        "func": "attr",
+                                        "name": "variables/page"
+                                      },
+                                      "description": "Page",
+                                      "func": "contains"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "CN",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "cn:shop:apporder:ttmorderinfo",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "cn:shop:order:ttmorderinfo",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "cn:shop:apporder:orderinfo",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "cn:shop:order:orderinfo",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "cn:shop:order:confirm",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "www.samsungshop.com.cn/order/confirm.htm",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "DE",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "de:shop:checkout:kundendaten",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "de:shop:checkout:vertragsdaten",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "de:shop:checkout:bestelluebersicht",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "de:shop:tarife:checkout:kundendaten",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "de:shop:tarife:checkout:vertragsdaten",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "de:shop:tarife:checkout:bestelluebersicht",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "IN",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "in:shop:checkout:orderinformation",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "shop.samsung.com/in/checkout/onepage/",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:bajaj-card-entry",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:billing-address",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:card-entry",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:payment:",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:payoptions",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:place-order",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "in:shop:lite:checkout:cart:shipping-",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "KR",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "store.samsung.com/sec/ng/cartAndCheckout/checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "store.samsung.com/sec/checkout/multi/",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "sec:shop:order",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "contains"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "LATIN",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "func": "container",
+                              "context": "hits",
+                              "pred": {
+                                "func": "and",
+                                "preds": [
+                                  {
+                                    "func": "container",
+                                    "context": "hits",
+                                    "pred": {
+                                      "func": "or",
+                                      "preds": [
+                                        {
+                                          "str": "latin:shop:checkout",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/page"
+                                          },
+                                          "description": "Page",
+                                          "func": "starts-with"
+                                        },
+                                        {
+                                          "str": "shop.samsung.com/latin/checkout",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "func": "container",
+                                    "context": "hits",
+                                    "pred": {
+                                      "func": "without",
+                                      "pred": {
+                                        "func": "or",
+                                        "preds": [
+                                          {
+                                            "str": "cart",
+                                            "val": {
+                                              "func": "attr",
+                                              "name": "variables/page"
+                                            },
+                                            "description": "Page",
+                                            "func": "contains"
+                                          },
+                                          {
+                                            "str": "cart",
+                                            "val": {
+                                              "func": "attr",
+                                              "name": "variables/prop39"
+                                            },
+                                            "description": "URL (p39)",
+                                            "func": "contains"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "context": "hits",
+                              "description": "Container Title",
+                              "func": "container",
+                              "pred": {
+                                "func": "and",
+                                "preds": [
+                                  {
+                                    "func": "container",
+                                    "context": "hits",
+                                    "pred": {
+                                      "func": "or",
+                                      "preds": [
+                                        {
+                                          "str": "latin:shop",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/page"
+                                          },
+                                          "description": "Page",
+                                          "func": "starts-with"
+                                        },
+                                        {
+                                          "str": "shop.samsung.com/latin",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "context": "hits",
+                                    "description": "Container Title",
+                                    "func": "container",
+                                    "pred": {
+                                      "func": "or",
+                                      "preds": [
+                                        {
+                                          "str": ":checkout:",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/page"
+                                          },
+                                          "description": "Page",
+                                          "func": "contains"
+                                        },
+                                        {
+                                          "str": "/checkout/",
+                                          "val": {
+                                            "func": "attr",
+                                            "name": "variables/prop39"
+                                          },
+                                          "description": "URL (p39)",
+                                          "func": "contains"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "func": "container",
+                                    "context": "hits",
+                                    "pred": {
+                                      "func": "without",
+                                      "pred": {
+                                        "func": "or",
+                                        "preds": [
+                                          {
+                                            "str": "cart",
+                                            "val": {
+                                              "func": "attr",
+                                              "name": "variables/page"
+                                            },
+                                            "description": "Page",
+                                            "func": "contains"
+                                          },
+                                          {
+                                            "str": "cart",
+                                            "val": {
+                                              "func": "attr",
+                                              "name": "variables/prop39"
+                                            },
+                                            "description": "URL (p39)",
+                                            "func": "contains"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "PL",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "pl:shop:koszyk:adres",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "pl:shop:koszyk:platnosc",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "RU",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "ru:shop:order",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "starts-with"
+                            },
+                            {
+                              "str": "online-samsung.ru/order",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "UK",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "uk:checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "uk:shop:checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "contains"
+                            },
+                            {
+                              "str": "shop.samsung.com/uk/checkout",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/prop39"
+                              },
+                              "description": "URL (p39)",
+                              "func": "contains"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "context": "hits",
+                        "description": "SENA",
+                        "func": "container",
+                        "pred": {
+                          "func": "or",
+                          "preds": [
+                            {
+                              "str": "dk:shop:basket",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "fi:shop:basket",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "no:shop:basket",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            },
+                            {
+                              "str": "se:shop:basket",
+                              "val": {
+                                "func": "attr",
+                                "name": "variables/page"
+                              },
+                              "description": "Page",
+                              "func": "streq"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "func": "segment",
+    "version": [
+      1,
+      0,
+      0
+    ]
+  },
+  "id": "s200001591_6134d80b59054d57f9c58854",
+  "isPostShardId": true,
+  "rsid": "sssamsung4mstglobal",
+  "owner": {
+    "id": 200043605
+  }
+}
