@@ -1,0 +1,58 @@
+name,description,id,isPostShardId,rsid,owner
+[API Test] Home > MKT PD,API Test,s200001591_615b06d4da953036078654b2,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Buy,API Test,s200001591_615b06d7354a021e83400664,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Cart,API Test,s200001591_615b06da4ed3ad7cf3d00ef4,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Checkout,API Test,s200001591_615b06dd7cc94228bc427d4b,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Order,API Test,s200001591_615b06e0314d89222458bbc5,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Buy,API Test,s200001591_615b06e2b5f444216c5a0435,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Cart,API Test,s200001591_615b06e5c9d61a161132898b,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Checkout,API Test,s200001591_615b06e86e876f70ac1270a6,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Order,API Test,s200001591_615b06eb6e876f70ac1270a7,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Buy > Cart,API Test,s200001591_615b06ed392e1537bf8f5f01,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Buy > Checkout,API Test,s200001591_615b06f06702bf1cd17799f7,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Buy > Order,API Test,s200001591_615b06f3392e1537bf8f5f02,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Cart > Checkout,API Test,s200001591_615b06f60f5036456860352b,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Cart > Order,API Test,s200001591_615b06f9354a021e83400665,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Checkout > Order,API Test,s200001591_615b06fb6e876f70ac1270a8,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Buy,API Test,s200001591_615b06fe354a021e83400666,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Cart,API Test,s200001591_615b0702354a021e83400667,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Checkout,API Test,s200001591_615b070517a65b0060e88459,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Order,API Test,s200001591_615b07080f5036456860352c,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Buy > Cart,API Test,s200001591_615b070a6702bf1cd17799f8,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Buy > Checkout,API Test,s200001591_615b070e3a56e92d9dd2ea64,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Buy > Order,API Test,s200001591_615b07104ed3ad7cf3d00ef5,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Cart > Checkout,API Test,s200001591_615b07147cc94228bc427d4c,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Cart > Order,API Test,s200001591_615b07173a56e92d9dd2ea65,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Checkout > Order,API Test,s200001591_615b07196e876f70ac1270a9,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Buy > Cart,API Test,s200001591_615b071c17a65b0060e8845a,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Buy > Checkout,API Test,s200001591_615b07207cc94228bc427d4d,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Buy > Order,API Test,s200001591_615b0722314d89222458bbc6,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Cart > Checkout,API Test,s200001591_615b0726c9d61a161132898c,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Cart > Order,API Test,s200001591_615b0729314d89222458bbc7,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Checkout > Order,API Test,s200001591_615b072cc9d61a161132898d,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Buy > Cart > Checkout,API Test,s200001591_615b072f6e876f70ac1270aa,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Buy > Cart > Order,API Test,s200001591_615b07326702bf1cd17799f9,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Buy > Checkout > Order,API Test,s200001591_615b0735c9d61a161132898e,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Cart > Checkout > Order,API Test,s200001591_615b073817a65b0060e8845b,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Buy > Cart,API Test,s200001591_615b073b4ed3ad7cf3d00ef6,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Buy > Checkout,API Test,s200001591_615b073e0f5036456860352e,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Buy > Order,API Test,s200001591_615b07416702bf1cd17799fa,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Cart > Checkout,API Test,s200001591_615b07450f5036456860352f,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Cart > Order,API Test,s200001591_615b074817a65b0060e8845c,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Checkout > Order,API Test,s200001591_615b074b314d89222458bbc9,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Buy > Cart > Checkout,API Test,s200001591_615b074ef0ed11357f699849,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Buy > Cart > Order,API Test,s200001591_615b07516702bf1cd17799fb,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Buy > Checkout > Order,API Test,s200001591_615b07557cc94228bc427d4e,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Cart > Checkout > Order,API Test,s200001591_615b07586e876f70ac1270ab,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Buy > Cart > Checkout,API Test,s200001591_615b075c6e876f70ac1270ac,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Buy > Cart > Order,API Test,s200001591_615b075fb5f444216c5a0436,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Buy > Checkout > Order,API Test,s200001591_615b0762314d89222458bbca,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Cart > Checkout > Order,API Test,s200001591_615b0765392e1537bf8f5f04,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Buy > Cart > Checkout > Order,API Test,s200001591_615b0769f0ed11357f69984a,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Buy > Cart > Checkout,API Test,s200001591_615b076c4ed3ad7cf3d00ef7,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Buy > Cart > Order,API Test,s200001591_615b07700f50364568603530,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Buy > Checkout > Order,API Test,s200001591_615b07736702bf1cd17799fc,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Cart > Checkout > Order,API Test,s200001591_615b0777f0ed11357f69984b,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > Buy > Cart > Checkout > Order,API Test,s200001591_615b077a6702bf1cd17799fd,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] MKT PD > Buy > Cart > Checkout > Order,API Test,s200001591_615b077d6702bf1cd17799fe,True,sssamsung4mstglobal,{'id': 200043605}
+[API Test] Home > MKT PD > Buy > Cart > Checkout > Order,API Test,s200001591_615b0781314d89222458bbcb,True,sssamsung4mstglobal,{'id': 200043605}

@@ -4,6 +4,7 @@ from copy import deepcopy
 from itertools import *
 import os
 from ast import literal_eval
+from sqlalchemy import create_engine
 import pandas as pd
 import time
 
@@ -88,6 +89,16 @@ def setSegment(dataset, ifKey):
     return segmentList
 
 
+def stackTodb(dataFrame, dbTableName):
+    print(dataFrame)
+    db_connection_str = 'mysql+pymysql://root:12345@127.0.0.1:3307/segment'
+    db_connection = create_engine(db_connection_str, encoding='utf-8')
+    conn = db_connection.connect()
+
+    dataFrame.to_sql(name=dbTableName, con=db_connection, if_exists='append', index=False)
+    print("finished")
+
+
 def getSegment(path, target_path):
     # getFileName
     jsonDict = getjsonDict(getJsonList(path))
@@ -104,7 +115,7 @@ def getSegment(path, target_path):
 
     # template
     targetFile = readJson(target_path)
-    target = deepcopy(targetFile)
+    target = deepcopy(targetFile)  
     
     # 변경 후 호출
     segmentInfo = []
@@ -114,19 +125,29 @@ def getSegment(path, target_path):
 
         callSegment = createSegment(target)
         print(callSegment)
+        
+        string = 'C:\\Users\sunky\OneDrive - Concentrix Corporation\Documents\Segment\segment_list\\' + str(callSegment["id"]) + '.json'
+        with open(str(string), 'w', encoding='utf-8') as fileName:
+            json.dump(target, fileName, indent="\t")
+
         segmentInfo.append(callSegment)
 
     
     exportToCSV(pd.DataFrame(segmentInfo), 'Segment_List.csv')
 
+    segmentList = pd.DataFrame(segmentInfo).drop("owner", axis=1)
+    stackTodb(segmentList, 'tb_segment_list')
 
 if __name__ == "__main__":
 # 내꺼 : 200121276
 # 공용계정 : 200043605
 
-    path = ".\jsonFile\segmentApi\gmc_node"
-    target_path = 'jsonFile\segmentApi\segmentApi_template.json'
+    path = "segmentApi\gmc_node"
+    target_path = 'segmentApi\segmentApi_template.json'
 
     start = time.time()
     getSegment(path, target_path)
     print("Time took: ", time.time() - start)
+
+    # a = readJson("segmentApi\gmc_test_update\cnx_home.json")
+    # print(createSegment(a))
