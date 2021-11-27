@@ -35,7 +35,7 @@ def createSegment(jsonFile):
     
     return createSeg
 
-
+# 리스트 형식으로 return
 def getJsonList(path):
     file_lst = os.listdir(path)
     # 파일 이름 리스트
@@ -56,6 +56,13 @@ def getjsonDict(jsonList):
 
     return jsonDict
 
+
+def getSegmentId(jsonList):
+    jsonDict = {}
+    for i in range(len(jsonList)):
+        jsonDict[jsonList[i]['description']] = str(jsonList[i]['id'])
+
+    return jsonDict
 
 # input : list
 def getAllCases(dataset):
@@ -102,16 +109,30 @@ def stackTodb(dataFrame, dbTableName):
 def getSegment(path, target_path):
     # getFileName
     jsonDict = getjsonDict(getJsonList(path))
+    jsonSeg = getSegmentId(getJsonList(path))
 
-    # key, value로 분리
+    # Description : 딕셔너리를 key, value로 분리
     jsonKey = []
     jsonValue = []
     for key, value in jsonDict.items():
         jsonKey.append(key)
         jsonValue.append(value)
 
+    # Segment ID : 딕셔너리를 key, value로 분리
+    jsonSegKey = []
+    jsonSegValue = []
+    for key, value in jsonSeg.items():
+        jsonSegKey.append(key)
+        jsonSegValue.append(value)
+
     segmentName = setSegment(getAllCases(jsonKey), True)
     segmentValue = setSegment(getAllCases(jsonValue), False)
+
+    # Segment
+    segmentIdList = { 'segment_name': setSegment(getAllCases(jsonSegKey), True),
+                    'segment_contains' : setSegment(getAllCases(jsonSegValue), False)}
+
+    stackTodb(pd.DataFrame(segmentIdList), 'tb_segment_contains')
 
     # template
     targetFile = readJson(target_path)
@@ -126,14 +147,15 @@ def getSegment(path, target_path):
         callSegment = createSegment(target)
         print(callSegment)
         
-        string = 'C:\\Users\sunky\OneDrive - Concentrix Corporation\Documents\Segment\segment_list\\' + str(callSegment["id"]) + '.json'
+        # string = 'C:\\Users\Administrator\OneDrive - Concentrix Corporation\Documents\★Segment\segment_list\\' + str(callSegment["id"]) + '.json'        
+        string = 'C:\\Users\sunky\OneDrive - Concentrix Corporation\Documents\★Segment\segment_list\\' + str(callSegment["id"]) + '.json'
         with open(str(string), 'w', encoding='utf-8') as fileName:
             json.dump(target, fileName, indent="\t")
 
         segmentInfo.append(callSegment)
 
     
-    exportToCSV(pd.DataFrame(segmentInfo), 'Segment_List.csv')
+    # exportToCSV(pd.DataFrame(segmentInfo), 'Segment_List.csv')
 
     segmentList = pd.DataFrame(segmentInfo).drop("owner", axis=1)
     stackTodb(segmentList, 'tb_segment_list')
@@ -149,5 +171,4 @@ if __name__ == "__main__":
     getSegment(path, target_path)
     print("Time took: ", time.time() - start)
 
-    # a = readJson("segmentApi\gmc_test_update\cnx_home.json")
-    # print(createSegment(a))
+
