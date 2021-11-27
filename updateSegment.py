@@ -1,30 +1,13 @@
 import aanalytics2 as api2
 import json
-from copy import deepcopy
-from itertools import *
 import os
-from ast import literal_eval
+from itertools import *
 from sqlalchemy import create_engine
 import pandas as pd
-import time
-
-
-
-def dataInitiator():
-    api2.configure()
-    logger = api2.Login() 
-    logger.connector.config
-
-
-def readJson(jsonFile):
-    with open(jsonFile, 'r', encoding='UTF8') as bla:
-        jsonFile = json.loads(bla.read())
-
-    return jsonFile
-
+import createSegment as cs
 
 def updateSegment(segmentID, jsonFile):
-    dataInitiator()
+    cs.dataInitiator()
     cid = "samsun0"
     ags = api2.Analytics(cid)
     ags.header
@@ -32,6 +15,15 @@ def updateSegment(segmentID, jsonFile):
     createSeg = ags.updateSegment(segmentID, jsonFile)
     
     return createSeg
+
+def getSegmentId(path, segmentId):
+
+    jsonList = []
+    for i in range(len(segmentId)):
+        filepath = path + '\\' + segmentId[i] + '.json'
+        jsonList.append(cs.readJson(filepath))
+        
+    return jsonList
 
 def idToList(segmentId):
     db_connection_str = 'mysql+pymysql://root:12345@127.0.0.1:3307/segment'
@@ -58,5 +50,10 @@ if __name__ == "__main__":
     # jsonFile = readJson("segmentApi\gmc_test_update\cnx_update.json")
     # print(updateSegment(segmentID, jsonFile))
 
-    print(idToList("s200001591_56b04bf3e4b041b05a529c49"))
-    
+
+
+    # path = 'C:\\Users\sunky\OneDrive - Concentrix Corporation\Documents\★Segment\segment_list'
+    # segmentId = idToList("s200001591_56b04bf3e4b041b05a529c49")
+    # print(getSegmentId(path, segmentId))
+
+    print(cs.readJson('segmentApi\gmc_node\\1.home.json'))
