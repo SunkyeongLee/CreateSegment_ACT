@@ -2,6 +2,7 @@ import aanalytics2 as api2
 import json
 from copy import deepcopy
 from itertools import *
+import csv
 import os
 from ast import literal_eval
 from sqlalchemy import create_engine
@@ -24,6 +25,16 @@ def readJson(jsonFile):
 
     return jsonFile
 
+### New
+def readCSV(csvFile):
+    lines = open(csvFile).readlines()
+    
+    listCsv = []
+    for line in lines[1:]:
+        listCsv.append(line.split('\n')[0])
+
+    return listCsv
+
 
 def createSegment(jsonFile):
     dataInitiator()
@@ -43,6 +54,16 @@ def getJsonList(path):
 
     jsonList = []
     for file in file_lst:
+        filepath = path + '/' + file
+        jsonList.append(readJson(filepath))
+        
+    return jsonList
+
+### New
+def getJsonListCsv(path, fileLists):
+
+    jsonList = []
+    for file in fileLists:
         filepath = path + '/' + file
         jsonList.append(readJson(filepath))
         
@@ -105,11 +126,11 @@ def stackTodb(dataFrame, dbTableName):
     dataFrame.to_sql(name=dbTableName, con=db_connection, if_exists='append', index=False)
     print("finished")
 
-
-def getSegment(path, target_path):
+### NEW
+def getSegment(path, target_path, fileLists):
     # getFileName
-    jsonDict = getjsonDict(getJsonList(path))
-    jsonSeg = getSegmentId(getJsonList(path))
+    jsonDict = getjsonDict(getJsonListCsv(path, readCSV(fileLists)))
+    jsonSeg = getSegmentId(getJsonListCsv(path, readCSV(fileLists)))
 
     # Description : 딕셔너리를 key, value로 분리
     jsonKey = []
@@ -147,8 +168,8 @@ def getSegment(path, target_path):
         callSegment = createSegment(target)
         print(callSegment)
         
-        # string = 'C:\\Users\Administrator\OneDrive - Concentrix Corporation\Documents\★Segment\segment_list\\' + str(callSegment["id"]) + '.json'        
-        string = 'C:\\Users\sunky\OneDrive - Concentrix Corporation\Documents\★Segment\segment_list\\' + str(callSegment["id"]) + '.json'
+        # string = 'C:\\Users\Administrator\OneDrive - Concentrix Corporation\Documents\★Segment\segment_list\\' + str(callSegment["id"]) + '-' + time.strftime('%Y%m%d', time.localtime()) + '.json'
+        string = 'C:\\Users\sunky\OneDrive - Concentrix Corporation\Documents\★Segment\segment_list\\' + str(callSegment["id"]) + '-' + time.strftime('%Y%m%d', time.localtime()) + '.json'
         with open(str(string), 'w', encoding='utf-8') as fileName:
             json.dump(target, fileName, indent="\t")
 
@@ -164,11 +185,13 @@ if __name__ == "__main__":
 # 내꺼 : 200121276
 # 공용계정 : 200043605
 
-    path = "segmentApi\gmc_node"
+    # path = "segmentApi\gmc_node_final"
+    # fileLists = "segmentApi\gmc_input_segment\cnx_seg_input.csv"
+    # print(getJsonListCsv(path, readCSV(fileLists)))
+    path = "segmentApi\gmc_node_final"
+    fileLists = "segmentApi\gmc_input_segment\cnx_seg_input.csv"
     target_path = 'segmentApi\segmentApi_template.json'
-
+    
     start = time.time()
-    getSegment(path, target_path)
+    getSegment(path, target_path, fileLists)
     print("Time took: ", time.time() - start)
-
-
